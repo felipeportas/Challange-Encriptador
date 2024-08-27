@@ -1,0 +1,104 @@
+
+.cutive-regular {
+    font-family: "Cutive", serif;
+    font-weigth: 400;
+    font-size: 1.5rem;
+}
+
+.special-elite-regular {
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    background-color: #F9DBBA;
+    font-family: "Cultive", serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.logoAlura {
+    margin-left: 10px;
+    padding-top: 10px;
+    width: 10%;
+}
+
+main {
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;    
+}
+
+.text-area {
+    border: none;
+    color: #1A4870;
+    font-family: "Special Elite", system-ui;
+    margin-top: 90px;
+    text-transform: lowercase;
+}
+
+::placeholder { color:#1A4870; }
+    .text-area:focus {
+        outline: none;
+    }
+
+.mensagem {
+    background: white;
+    background-image: url(/assets/prssrc.svg);
+    background-repeat: no-repeat;
+    border-radius: 24px;
+    color: #1A4870;
+    margin-left: 98px;
+    margin-top: 20px;
+    padding-left: 20px;
+    position: fixed;
+    }
+
+.mensagem:focus {
+    outline: none;
+}
+
+.info-caracteres {
+    color:#1A4870;
+    font-size: 18px;
+}
+
+.botoes {
+    display: flex;
+    margin-top: 18px;
+}
+
+.btn-encriptar {
+    background-color: #1F316F;
+    border: 1px solid #1F316F;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+}
+
+.btn-descriptografar {
+    background-color: #F9DBBA;
+    border: 1px solid #1F316F;
+    border-radius: 24px;
+    color: #1F316F;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+}
+
+.btn-copiar {
+    background-color: white;
+    border: 1px solid #1F316F;
+    border-radius: 24px;
+    color: #1F316F;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 108px;
+    margin-top: 402px;
+    position: absolute;
+    width: 336px;
+}
+
