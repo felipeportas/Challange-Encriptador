@@ -1,5 +1,6 @@
 const textArea = document.querySelector(".text-area");
 const mensagem = document.querySelector(".mensagem");
+document.getElementById('execCopy').addEventListener('click', execCopy);
 
 function btnCriptografar() {
     const textoEncriptado = criptografar(textArea.value);
@@ -38,3 +39,11 @@ function descriptografar(stringDesencriptada) {
 
     return stringDesencriptada;
 }    
+
+function execCopy() {
+  document.querySelector(".mensagem").select();
+  document.execCommand("copy");
+}
+
+
+  
