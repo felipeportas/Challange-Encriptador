@@ -16,12 +16,12 @@
 <body>
 
     <header>
-        <img class="logoAlura" src="/assets/logo-alura.svg" alt="Logotipo da Alura">
+        <img class="logoAlura" src="./assets/logo-alura.svg" alt="Logotipo da Alura">
     </header>
 
-    <main>
-        <section>
-            <textarea class="text-area" cols="41" rows="4" placeholder="Digite seu texto"></textarea>
+    <main class="principal">
+        <section class="quadro-entrada">
+            <textarea class="text-area" cols="70" rows="15" placeholder="Digite seu texto"></textarea>
 
             <div class="info-caracteres">
                 <h6>Utilize apenas letras minísculas e sem acento.</h6>
@@ -34,14 +34,18 @@
             </div>
         </section>
 
-        <section>
-            <textarea class="mensagem" cols="20" rows="10"></textarea>
+        <section class="quadro-saida">
+            <textarea class="mensagem" cols="44" rows="33"></textarea>
             <button class="btn-copiar" onclick="execCopy()">Copiar</button>
         </section>
         
     </main>
 
     <script src="script.js"></script>
+
+    <footer class="rodape">
+        <p>Desenvolvido por Felipe Portas</p>
+    </footer>
 
 </body>
 </html>

@@ -1,58 +1,76 @@
 
-.cutive-regular {
-    font-family: "Cutive", serif;
-    font-weigth: 400;
-    font-size: 1.5rem;
+
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Special+Elite&display=swap');
+
+:root {
+    --cor-primaria: #F2F7FF;
+    --cor-secundaria: #0B409C;
+    --cor-terciaria: #FFCE63;
+    --cor-hover: #10316B;
+
+    --fonte-primaria: "Cutive Mono", monospace;
+    --fonte-secundaria: "Special Elite", system-ui;
 }
 
-.special-elite-regular {
-    font-family: "Special Elite", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
 
 * {
-    background-color: #F9DBBA;
-    font-family: "Cultive", serif;
+    margin: 0;
+    padding: 0;
+}    
+    
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    font-family: var(--fonte-primaria);
     font-weight: 400;
     font-size: 1.5rem;
 }
 
 .logoAlura {
-    margin-left: 10px;
-    padding-top: 10px;
-    width: 10%;
+    margin: 2rem 0rem 0rem 0rem;
+    padding-top: 1rem;
+    width: 8%;
 }
 
-main {
+.principal {
     display: flex;
-    margin-bottom: 50px;
-    margin-left: 80px;    
+    margin: 1.5rem 0rem 0rem 3rem;
+    gap: 0rem;    
 }
 
 .text-area {
-    border: none;
-    color: #1A4870;
-    font-family: "Special Elite", system-ui;
-    margin-top: 90px;
+    border: var(--cor-secundaria);
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+    margin-top: 3.2rem;
     text-transform: lowercase;
 }
 
-::placeholder { color:#1A4870; }
+::placeholder { color: var(--cor-secundaria); }
     .text-area:focus {
+        padding-top: 1rem;
+        padding-left: 1rem;
         outline: none;
     }
 
+.quadro-saida {
+    display: flex;
+    flex-direction: column;
+    
+}   
+
 .mensagem {
     background: white;
-    background-image: url(/assets/prssrc.svg);
     background-repeat: no-repeat;
-    border-radius: 24px;
-    color: #1A4870;
-    margin-left: 98px;
-    margin-top: 20px;
-    padding-left: 20px;
-    position: fixed;
+    background-size:contain;
+    background-image: url(./assets/prssrc.svg);
+    background-position: bottom;
+    border-radius: 5%;
+    color: var(--cor-secundaria);
+    margin-left: 2rem;
+    margin-top: 0;
+    padding-left: 1.5rem;
+    position: relative;
     }
 
 .mensagem:focus {
@@ -60,45 +78,114 @@ main {
 }
 
 .info-caracteres {
-    color:#1A4870;
-    font-size: 18px;
+    color:var(--cor-secundaria);
+    font-size: 1.2rem;
 }
 
 .botoes {
     display: flex;
-    margin-top: 18px;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    width: 85%;
 }
 
 .btn-encriptar {
-    background-color: #1F316F;
-    border: 1px solid #1F316F;
+    background-color: var(--cor-secundaria);
+    border: 1px solid var(--cor-hover);
     border-radius: 24px;
-    color: white;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-primaria);
     cursor: pointer;
-    height: 67px;
-    width: 328px;
+    height: 4.2rem;
+    width: 20.5rem;
+}
+
+.btn-encriptar:hover {
+    background-color: var(--cor-hover);
 }
 
 .btn-descriptografar {
-    background-color: #F9DBBA;
-    border: 1px solid #1F316F;
-    border-radius: 24px;
-    color: #1F316F;
+    background-color: var(--cor-primaria);
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-secundaria);
     cursor: pointer;
-    height: 67px;
-    width: 328px;
+    height: 4.2rem;
+    width: 20.5rem;
+}
+
+.btn-descriptografar:hover {
+    background-color: var(--cor-terciaria);
 }
 
 .btn-copiar {
     background-color: white;
     border: 1px solid #1F316F;
-    border-radius: 24px;
+    border-radius: 1.5rem;
+    font-family: var(--fonte-secundaria);
     color: #1F316F;
     cursor: pointer;
     height: 67px;
-    margin-left: 108px;
-    margin-top: 402px;
+    margin-left: 3rem;
+    margin-top: 25rem;
     position: absolute;
-    width: 336px;
+    width: 21rem;
 }
 
+.btn-copiar:hover {
+    background-color: var(--cor-primaria);
+}
+
+.rodape {
+    padding: 1.5rem;
+    margin-top: 3.5rem;
+    color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+
+    .logoAlura {
+        margin: 2rem 0rem 0rem 0rem;
+        padding-top: 2rem;
+        position: center;
+        width: 70%;       
+    }
+    
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .principal {
+        margin-top: 2rem;
+        flex-direction: column;
+        padding: 1%;
+    }
+
+    .botoes {
+        width: 100%;
+    }
+
+    .mensagem {
+        margin-top: 2rem;
+    }
+
+    .btn-copiar {
+        width: 60%;
+    }
+
+    .rodape {
+        position: absolute;
+        margin-top: 70rem;
+        width: 100%;
+    }
+
+        
+}
